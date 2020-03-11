@@ -30,14 +30,11 @@ WORKDIR /grpc/examples/grpc-trt-fgpa
 RUN git clone https://github.com/drankincms/grpc-trt-fgpa.git .
 ENV PKG_CONFIG_PATH /usr/local/lib/pkgconfig
 
-RUN yum -y install emacs-nox
-CMD bash
-
 RUN git submodule update --init
 
 COPY xrt_201920.2.5.309_7.4.1708-x86_64-xrt.rpm /tmp/xrt_201920.2.5.309_7.4.1708-x86_64-xrt.rpm
-RUN yum -y localinstall /tmp/xrt_201920.2.5.309_7.4.1708-x86_64-xrt.rpm
 
+RUN yum -y localinstall /tmp/xrt_201920.2.5.309_7.4.1708-x86_64-xrt.rpm
 RUN yum -y install boost-filesystem opencl-headers ocl-icd ocd-icd-devel clinfo
 
 RUN --mount=type=bind,target=/tools,source=/tools source /opt/xilinx/xrt/setup.sh && source /tools/xilinx/Vivado/2019.2/settings64.sh && make -j 16
