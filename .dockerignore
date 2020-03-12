@@ -1,0 +1,14 @@
+/tools/xilinx/Vitis/*
+/tools/xilinx/Vivado/*
+/tools/xilinx/DocNav/*
+/tools/xilinx/Model_Composer/*
+/tools/xilinx/xic/*
+/tools/xilinx/Vitis/2019.2/data/emulation/*
+!/tools/xilinx/Vivado/2019.2/settings64.sh
+!/tools/xilinx/Vitis/2019.2/.settings64-Vitis.sh
+!/tools/xilinx/Vivado/2019.2/.settings64-Vivado.sh
+!/tools/xilinx/DocNav/.settings64-DocNav.sh
+!/tools/xilinx/Vitis/2019.2/bin
+!/tools/xilinx/Model_Composer/2019.2/.settings64-Model_Composer.sh
+!/tools/xilinx/Vivado/2019.2/include/*
+.dockerignore
